@@ -1,0 +1,79 @@
+
+                                        Project fair backend creation
+
+            1.Create a server folder 
+            2.Create a package.json file -npm init -y
+            3.Update start command as "start":"node index.js" in script of package.json
+            4. Install packages
+                ->Express - for creating a server application in backend
+                    - npm i express
+                ->cors -for connecting different ports
+                    - npm i cors
+                ->dotenv - to load environment variables
+                    - npm i dotenv
+            5.Create .env file to hold environment variables
+            6.Create gitignore file - to add file to ignore while adding git
+                    eg: node_modules and .env
+            7.Create index.js file for defining server application 
+            8. MVC Architecture
+
+            ->MVC is abbreviated as Model View Controller is a design pattern created for developing applications specifically web applications. 
+            ->As the name suggests, it has three major parts. The traditional software design pattern works in an "Input - Process - Output" pattern whereas MVC works as "Controller -Model - View" approach.
+
+             Model: The Model encloses the clean application related data. But the model does not deal with any logic about how to present the data.
+             View: The View element is used for presenting the data of the model to the user. This element deals with how to link up with the model's data but doesn't provide any logic regarding what this data all about or how users can use these data.
+            Controller: The Controller is in between the model and the view element. It listens to all the incident and actions triggered in the view and performs an appropriate response back to the events.
+
+            Benefits: 
+
+            ->Logical clustering of related acts on any controller can be achieved through MVC.
+            ->Various developers can work at the same time on different parts the same application-controller, model, and the views part.
+            ->In MVC, models can have numerous views.
+
+            9.Create Router folder and inside it create routes.js file
+
+            10.Create Controller folder and inside it create userController.js file
+
+            11.Create a MongoBD Atlas account and create db and collection
+
+            12.mongoose library
+                    ->for connecting nodejs and mongodb
+                        -Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.
+                        Install - npm i mongoose
+
+            13.Models
+                  -Create a model folder , inside it create userShcema.js file
+                  -Controllers can only communicate with models, there is no way to direct connection to DB
+                ->Schema 
+                    -it maps to mongodb collection and defines the shape of the documents within that collection
+            
+            14. validator.js - A library of string validators and sanitizers.
+                        npm i validator
+            15.jwt token 
+                    JSON Web Tokens (JWTs) supports authorization and information exchange.
+
+                    One common use case is for allowing clients to preserve their session information after logging in. By storing the session information locally and passing it to the server for authentication when making requests, the server can trust that the client is a registered user.
+
+                        Install - npm i jsonwebtoken
+            16.middleware
+                ->Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
+
+                Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+
+                Middleware functions can perform the following tasks:
+
+                Execute any code.
+                Make changes to the request and the response objects.
+                End the request-response cycle.
+                Call the next middleware function in the stack.
+                If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
+
+                An Express application can use the following types of middleware:
+
+                1)Application-level middleware
+                2)Router-level middleware
+            
+            17. Multer node.js
+                     Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
+
+                     Install - npm install --save multer
